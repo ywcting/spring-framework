@@ -9,6 +9,7 @@ import org.springframework.core.io.ClassPathResource;
 public class BeanFactoryTest {
 	@Test
 	public void testSimpleLoad(){
+
 		BeanFactory bf = new XmlBeanFactory(new ClassPathResource("org/springframework/beans/factory/BeanFactoryTest.xml"));
 		MyTestBean bean = (MyTestBean)bf.getBean("myTestBean");
 		System.out.println(bean.getTestStr());
